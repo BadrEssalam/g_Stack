@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(const MyWidget());
+  runApp(const MyApp());
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,20 @@ class MyWidget extends StatelessWidget {
       home: Scaffold(
         drawer: const Drawer(),
         appBar: AppBar(),
-        body: Stack(),
+        body: Stack(
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              decoration: const BoxDecoration(
+                color: Colors.amber,
+              ),
+              margin: EdgeInsets.only(
+                  top: 150,
+                  left: (MediaQuery.of(context).size.width - 200) / 2),
+            )
+          ],
+        ),
       ),
     );
   }
