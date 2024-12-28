@@ -7,6 +7,9 @@ void main(List<String> args) {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // variables
+  final double ContainerHeight = 250;
+  final double ContainerWidth = 300;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,14 +19,15 @@ class MyApp extends StatelessWidget {
         body: Stack(
           children: [
             Container(
-              height: 200,
-              width: 200,
+              height: ContainerHeight,
+              width: ContainerWidth,
               decoration: const BoxDecoration(
                 color: Colors.amber,
+                borderRadius: BorderRadius.all(Radius.circular(10))
               ),
               margin: EdgeInsets.only(
                   top: 150,
-                  left: (MediaQuery.of(context).size.width - 200) / 2),
+                  left: (MediaQuery.of(context).size.width - ContainerWidth) / 2),
             )
           ],
         ),
