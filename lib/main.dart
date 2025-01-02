@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
               height: ContainerHeight,
               width: ContainerWidth,
               decoration: const BoxDecoration(
-                  color: Colors.amber,
+                  color: Color.fromARGB(255, 1, 46, 59),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               margin: EdgeInsets.only(
                   top: 150,
@@ -34,15 +35,17 @@ class MyApp extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Username',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
-                      Container(
+                      SizedBox(
                           width: 230,
                           height: 40,
                           child: TextField(
                             decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              filled: true,
                                 enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
                           ))
                     ],
