@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
 
   // variables
   final double ContainerHeight = 250;
-  final double ContainerWidth = 350;
+  final double ContainerWidth = 380;
+  final double textFieldWidth = 250;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -40,7 +41,26 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       SizedBox(
-                          width: 230,
+                          width: textFieldWidth,
+                          height: 40,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              filled: true,
+                                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
+                          ))
+                    ],
+                  ),
+                  const SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Email',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      SizedBox(
+                          width: textFieldWidth,
                           height: 40,
                           child: TextField(
                             decoration: InputDecoration(
