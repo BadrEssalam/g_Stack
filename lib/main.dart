@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
               margin: EdgeInsets.only(
                   top: 150,
                   left: (MediaQuery.of(context).size.width - ContainerWidth) / 2),
+                  child: Column(),
             )
           ],
         ),
