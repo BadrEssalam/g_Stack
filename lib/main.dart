@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -19,8 +17,16 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         drawer: const Drawer(),
         appBar: AppBar(),
-        body: Stack(
+        body: Column(
           children: [
+            const Text(
+              "Register",
+              style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 1, 46, 59),
+              ),
+            ),
             Container(
               height: ContainerHeight,
               width: ContainerWidth,
@@ -28,7 +34,7 @@ class MyApp extends StatelessWidget {
                   color: Color.fromARGB(255, 1, 46, 59),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               margin: EdgeInsets.only(
-                  top: 25,
+                  top: 10,
                   left:
                       (MediaQuery.of(context).size.width - ContainerWidth) / 2),
               padding: const EdgeInsets.all(10),
@@ -47,7 +53,9 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 5,),
+                      const SizedBox(
+                        height: 5,
+                      ),
                       SizedBox(
                           height: 50,
                           child: TextField(
@@ -71,7 +79,9 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 5,),
+                      const SizedBox(
+                        height: 5,
+                      ),
                       SizedBox(
                           height: 50,
                           child: TextField(
@@ -96,7 +106,9 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 5,),
+                      const SizedBox(
+                        height: 5,
+                      ),
                       SizedBox(
                           height: 50,
                           child: TextField(
@@ -120,7 +132,9 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 5,),
+                      const SizedBox(
+                        height: 5,
+                      ),
                       SizedBox(
                           height: 50,
                           child: TextField(
@@ -133,6 +147,23 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateColor.resolveWith(
+                      (states) => Colors.black26)),
+              child: const Text(
+                "Register",
+                style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 1, 46, 59),
+                ),
               ),
             )
           ],
