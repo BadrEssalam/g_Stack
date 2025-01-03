@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // variables
-  final double ContainerHeight = 250;
+  final double ContainerHeight = 500;
   final double ContainerWidth = 380;
   final double textFieldWidth = 250;
   @override
@@ -27,23 +28,28 @@ class MyApp extends StatelessWidget {
                   color: Color.fromARGB(255, 1, 46, 59),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               margin: EdgeInsets.only(
-                  top: 150,
+                  top: 25,
                   left:
                       (MediaQuery.of(context).size.width - ContainerWidth) / 2),
               padding: const EdgeInsets.all(10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         'Username',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
+                      const SizedBox(height: 5,),
                       SizedBox(
-                          width: textFieldWidth,
-                          height: 40,
+                          height: 50,
                           child: TextField(
                             decoration: InputDecoration(
                                 fillColor: Colors.white,
@@ -53,16 +59,21 @@ class MyApp extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         'Email',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
+                      const SizedBox(height: 5,),
                       SizedBox(
-                          width: textFieldWidth,
-                          height: 40,
+                          height: 50,
                           child: TextField(
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
@@ -73,16 +84,21 @@ class MyApp extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         'Password',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
+                      const SizedBox(height: 5,),
                       SizedBox(
-                          width: textFieldWidth,
-                          height: 40,
+                          height: 50,
                           child: TextField(
                             decoration: InputDecoration(
                                 fillColor: Colors.white,
@@ -92,16 +108,21 @@ class MyApp extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Confirm',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        'Password Confirmation',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
+                      const SizedBox(height: 5,),
                       SizedBox(
-                          width: textFieldWidth,
-                          height: 40,
+                          height: 50,
                           child: TextField(
                             decoration: InputDecoration(
                                 fillColor: Colors.white,
@@ -110,7 +131,7 @@ class MyApp extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(5))),
                           ))
                     ],
-                  )
+                  ),
                 ],
               ),
             )
