@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
                       (MediaQuery.of(context).size.width - ContainerWidth) / 2),
               padding: const EdgeInsets.all(10),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,13 +46,13 @@ class MyApp extends StatelessWidget {
                           height: 40,
                           child: TextField(
                             decoration: InputDecoration(
-                              fillColor: Colors.white,
-                              filled: true,
-                                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
+                                fillColor: Colors.white,
+                                filled: true,
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5))),
                           ))
                     ],
                   ),
-                  const SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -63,10 +64,50 @@ class MyApp extends StatelessWidget {
                           width: textFieldWidth,
                           height: 40,
                           child: TextField(
+                            keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
-                              fillColor: Colors.white,
-                              filled: true,
-                                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
+                                fillColor: Colors.white,
+                                filled: true,
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5))),
+                          ))
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Password',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      SizedBox(
+                          width: textFieldWidth,
+                          height: 40,
+                          child: TextField(
+                            decoration: InputDecoration(
+                                fillColor: Colors.white,
+                                filled: true,
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5))),
+                          ))
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Confirm',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      SizedBox(
+                          width: textFieldWidth,
+                          height: 40,
+                          child: TextField(
+                            decoration: InputDecoration(
+                                fillColor: Colors.white,
+                                filled: true,
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5))),
                           ))
                     ],
                   )
