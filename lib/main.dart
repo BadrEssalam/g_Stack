@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
               height: ContainerHeight,
               width: ContainerWidth,
               decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 1, 46, 59),
+                  color: Color.fromARGB(255, 3, 25, 31),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               margin: EdgeInsets.only(
                   top: 10,
@@ -143,7 +144,7 @@ class MyApp extends StatelessWidget {
                                 filled: true,
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5))),
-                          ))
+                          )),
                     ],
                   ),
                 ],
@@ -152,20 +153,68 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            TextButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateColor.resolveWith(
-                      (states) => Colors.black26)),
-              child: const Text(
-                "Register",
-                style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 1, 46, 59),
+            // TextButton(
+            //   onPressed: () {},
+            //   style: ButtonStyle(
+            //       backgroundColor: MaterialStateColor.resolveWith(
+            //           (states) => Colors.black26)),
+            //   child: const Text(
+            //     "Register",
+            //     style: TextStyle(
+            //       fontSize: 35,
+            //       fontWeight: FontWeight.bold,
+            //       color: Color.fromARGB(255, 1, 46, 59),
+            //     ),
+            //   ),
+            // ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: 160,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.black12),
                 ),
-              ),
-            )
+                Container(
+                  height: 140,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.black26),
+                ),
+                Container(
+                  height: 120,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.black38),
+                ),
+                Container(
+                  height: 100,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.black45),
+                ),
+                Container(
+                  height: 80,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.black54),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    shape: const CircleBorder(),
+                    fixedSize: const Size.fromRadius(80),
+                  ).copyWith(
+                    overlayColor: MaterialStateProperty.all(
+                        Colors.black.withOpacity(0.2)), // Splash color
+                  ),
+                  child: const Text(
+                    "Register",
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
