@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -20,6 +19,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(),
         body: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
                 "Register",
@@ -35,16 +35,11 @@ class MyApp extends StatelessWidget {
                 decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 3, 25, 31),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                margin: EdgeInsets.only(
-                    top: 10,
-                    left:
-                        (MediaQuery.of(context).size.width - ContainerWidth) / 2),
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
@@ -70,7 +65,6 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
@@ -97,7 +91,6 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
@@ -123,7 +116,6 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
