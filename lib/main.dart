@@ -18,204 +18,192 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         drawer: const Drawer(),
         appBar: AppBar(),
-        body: Column(
-          children: [
-            const Text(
-              "Register",
-              style: TextStyle(
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 1, 46, 59),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const Text(
+                "Register",
+                style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 1, 46, 59),
+                ),
               ),
-            ),
-            Container(
-              height: ContainerHeight,
-              width: ContainerWidth,
-              decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 3, 25, 31),
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
-              margin: EdgeInsets.only(
-                  top: 10,
-                  left:
-                      (MediaQuery.of(context).size.width - ContainerWidth) / 2),
-              padding: const EdgeInsets.all(10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Container(
+                height: ContainerHeight,
+                width: ContainerWidth,
+                decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 3, 25, 31),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                margin: EdgeInsets.only(
+                    top: 10,
+                    left:
+                        (MediaQuery.of(context).size.width - ContainerWidth) / 2),
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Username',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        SizedBox(
+                            height: 50,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5))),
+                            ))
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Email',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        SizedBox(
+                            height: 50,
+                            child: TextField(
+                              keyboardType: TextInputType.emailAddress,
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5))),
+                            ))
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Password',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        SizedBox(
+                            height: 50,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5))),
+                            ))
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Password Confirmation',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        SizedBox(
+                            height: 50,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5))),
+                            )),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Stack(
+                alignment: Alignment.center,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Username',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      SizedBox(
-                          height: 50,
-                          child: TextField(
-                            decoration: InputDecoration(
-                                fillColor: Colors.white,
-                                filled: true,
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5))),
-                          ))
-                    ],
+                  Container(
+                    height: 160,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.black12),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Email',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      SizedBox(
-                          height: 50,
-                          child: TextField(
-                            keyboardType: TextInputType.emailAddress,
-                            decoration: InputDecoration(
-                                fillColor: Colors.white,
-                                filled: true,
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5))),
-                          ))
-                    ],
+                  Container(
+                    height: 140,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.black26),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Password',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      SizedBox(
-                          height: 50,
-                          child: TextField(
-                            decoration: InputDecoration(
-                                fillColor: Colors.white,
-                                filled: true,
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5))),
-                          ))
-                    ],
+                  Container(
+                    height: 120,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.black38),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Password Confirmation',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
+                  Container(
+                    height: 100,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.black45),
+                  ),
+                  Container(
+                    height: 80,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.black54),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      shape: const CircleBorder(),
+                      fixedSize: const Size.fromRadius(80),
+                    ).copyWith(
+                      overlayColor: MaterialStateProperty.all(
+                          Colors.black.withOpacity(0.2)), // Splash color
+                    ),
+                    child: const Text(
+                      "Register",
+                      style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      SizedBox(
-                          height: 50,
-                          child: TextField(
-                            decoration: InputDecoration(
-                                fillColor: Colors.white,
-                                filled: true,
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5))),
-                          )),
-                    ],
+                    ),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            // TextButton(
-            //   onPressed: () {},
-            //   style: ButtonStyle(
-            //       backgroundColor: MaterialStateColor.resolveWith(
-            //           (states) => Colors.black26)),
-            //   child: const Text(
-            //     "Register",
-            //     style: TextStyle(
-            //       fontSize: 35,
-            //       fontWeight: FontWeight.bold,
-            //       color: Color.fromARGB(255, 1, 46, 59),
-            //     ),
-            //   ),
-            // ),
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  height: 160,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.black12),
-                ),
-                Container(
-                  height: 140,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.black26),
-                ),
-                Container(
-                  height: 120,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.black38),
-                ),
-                Container(
-                  height: 100,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.black45),
-                ),
-                Container(
-                  height: 80,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.black54),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    shape: const CircleBorder(),
-                    fixedSize: const Size.fromRadius(80),
-                  ).copyWith(
-                    overlayColor: MaterialStateProperty.all(
-                        Colors.black.withOpacity(0.2)), // Splash color
-                  ),
-                  child: const Text(
-                    "Register",
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
