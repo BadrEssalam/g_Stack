@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:g_stack/TextButtonLayers.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -149,31 +150,11 @@ class MyApp extends StatelessWidget {
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  Container(
-                    height: 160,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black12),
-                  ),
-                  Container(
-                    height: 140,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black26),
-                  ),
-                  Container(
-                    height: 120,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black38),
-                  ),
-                  Container(
-                    height: 100,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black45),
-                  ),
-                  Container(
-                    height: 80,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black54),
-                  ),
+                  const TextButtonLayers(containerHeight: 160),
+                  const TextButtonLayers(containerHeight: 140),
+                  const TextButtonLayers(containerHeight: 120),
+                  const TextButtonLayers(containerHeight: 100),
+                  const TextButtonLayers(containerHeight: 80),
                   TextButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
