@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:g_stack/LabeledTextField.dart';
 import 'package:g_stack/TextButtonLayers.dart';
 
 void main(List<String> args) {
@@ -37,110 +38,13 @@ class MyApp extends StatelessWidget {
                     color: Color.fromARGB(255, 3, 25, 31),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
                 padding: const EdgeInsets.all(10),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Username',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        SizedBox(
-                            height: 50,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5))),
-                            ))
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Email',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        SizedBox(
-                            height: 50,
-                            child: TextField(
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5))),
-                            ))
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Password',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        SizedBox(
-                            height: 50,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5))),
-                            ))
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Password Confirmation',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        SizedBox(
-                            height: 50,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5))),
-                            )),
-                      ],
-                    ),
+                    LabeledTextField(textData: "Username"),
+                    LabeledTextField(textData: "Email"),
+                    LabeledTextField(textData: "Password"),
+                    LabeledTextField(textData: "Password Confirmation"),
                   ],
                 ),
               ),
