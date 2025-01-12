@@ -10,8 +10,6 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // variables
-  final double ContainerHeight = 500;
-  final double ContainerWidth = 380;
   final double textFieldWidth = 250;
   @override
   Widget build(BuildContext context) {
@@ -32,8 +30,8 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
-                height: ContainerHeight,
-                width: ContainerWidth,
+                height: 500,
+                width: 380,
                 decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 3, 25, 31),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
