@@ -59,13 +59,24 @@ class MyApp extends StatelessWidget {
                   const TextButtonLayers(containerHeight: 80),
                   TextButton(
                     onPressed: () {},
-                    style: TextButton.styleFrom(
-                      shape: const CircleBorder(),
-                      fixedSize: const Size.fromRadius(80),
-                    ).copyWith(
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        const CircleBorder(),
+                      ),
+                      fixedSize: MaterialStateProperty.all(
+                        const Size.fromRadius(80),
+                      ),
                       overlayColor: MaterialStateProperty.all(
                           Colors.black.withOpacity(0.2)), // Splash color
                     ),
+                    // )
+                    // styleFrom(
+                    //   shape: const CircleBorder(),
+                    //   fixedSize: const Size.fromRadius(80),
+                    // ).copyWith(
+                    //   overlayColor: MaterialStateProperty.all(
+                    //       Colors.black.withOpacity(0.2)), // Splash color
+                    // ),
                     child: const Text(
                       "Register",
                       style: TextStyle(
