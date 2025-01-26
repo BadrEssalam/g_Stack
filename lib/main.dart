@@ -69,14 +69,6 @@ class MyApp extends StatelessWidget {
                       overlayColor: MaterialStateProperty.all(
                           Colors.black.withOpacity(0.2)), // Splash color
                     ),
-                    // )
-                    // styleFrom(
-                    //   shape: const CircleBorder(),
-                    //   fixedSize: const Size.fromRadius(80),
-                    // ).copyWith(
-                    //   overlayColor: MaterialStateProperty.all(
-                    //       Colors.black.withOpacity(0.2)), // Splash color
-                    // ),
                     child: const Text(
                       "Register",
                       style: TextStyle(
